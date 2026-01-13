@@ -33,10 +33,10 @@ const ClassifiedsPage: React.FC<ClassifiedsPageProps> = ({ country }) => {
               <div className="flex items-center gap-4">
                 <label className="text-sm font-semibold text-gray-700">Ordenar por:</label>
                 <select className="px-4 py-2 border-2 border-gray-300 rounded-md text-sm cursor-pointer bg-white focus:outline-none focus:border-blue-600">
-                  <option>MÃ¡s recientes</option>
+                  <option>Más recientes</option>
                   <option>Menor precio</option>
                   <option>Mayor precio</option>
-                  <option>MÃ¡s relevantes</option>
+                  <option>Más relevantes</option>
                 </select>
               </div>
             </div>
@@ -49,7 +49,7 @@ const ClassifiedsPage: React.FC<ClassifiedsPageProps> = ({ country }) => {
 
             <div className="flex justify-center items-center gap-2 py-8">
               <button className="px-4 py-2 border-2 border-gray-300 bg-white rounded-md cursor-pointer text-sm font-medium transition-all text-gray-700 hover:border-blue-600 hover:text-blue-600">
-                â† Anterior
+                ← Anterior
               </button>
               <button className="px-4 py-2 bg-blue-600 border-2 border-blue-600 text-white rounded-md cursor-pointer text-sm font-medium">
                 1
@@ -61,7 +61,7 @@ const ClassifiedsPage: React.FC<ClassifiedsPageProps> = ({ country }) => {
                 3
               </button>
               <button className="px-4 py-2 border-2 border-gray-300 bg-white rounded-md cursor-pointer text-sm font-medium transition-all text-gray-700 hover:border-blue-600 hover:text-blue-600">
-                Siguiente â†’
+                Siguiente →
               </button>
             </div>
           </div>

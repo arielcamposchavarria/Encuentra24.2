@@ -11,13 +11,13 @@ const SearchBar: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
           <div className="flex flex-col gap-2">
-            <label className="text-sm font-semibold text-gray-700">CategorÃ­a</label>
+            <label className="text-sm font-semibold text-gray-700">Categoría</label>
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
               className="px-3 py-3 border-2 border-gray-300 rounded-lg text-base transition-colors bg-white focus:outline-none focus:border-blue-600"
             >
-              <option value="">Seleccionar categorÃ­a</option>
+              <option value="">Seleccionar categoría</option>
               {SEARCH_CATEGORIES.map((cat) => (
                 <option key={cat} value={cat}>{cat}</option>
               ))}
@@ -30,18 +30,18 @@ const SearchBar: React.FC = () => {
               type="text"
               value={keyword}
               onChange={(e) => setKeyword(e.target.value)}
-              placeholder="Â¿QuÃ© estÃ¡s buscando?"
+              placeholder="¿Qué estás buscando?"
               className="px-3 py-3 border-2 border-gray-300 rounded-lg text-base transition-colors focus:outline-none focus:border-blue-600"
             />
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-sm font-semibold text-gray-700">RegiÃ³n</label>
+            <label className="text-sm font-semibold text-gray-700">Región</label>
             <input
               type="text"
               value={region}
               onChange={(e) => setRegion(e.target.value)}
-              placeholder="UbicaciÃ³n"
+              placeholder="Ubicación"
               className="px-3 py-3 border-2 border-gray-300 rounded-lg text-base transition-colors focus:outline-none focus:border-blue-600"
             />
           </div>

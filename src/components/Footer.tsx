@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     marca: ['Acerca de', 'Blog', 'Careers'],
     soporte: ['Centro de Ayuda', 'Contacto', 'FAQ'],
     clasificados: ['Autos', 'Inmuebles', 'Empleos', 'Servicios'],
-    legal: ['TÃ©rminos y Condiciones', 'PolÃ­tica de Privacidad', 'Cookies']
+    legal: ['Términos y Condiciones', 'Política de Privacidad', 'Cookies']
   };
 
   return (
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white">Soporte TÃ©cnico</h3>
+            <h3 className="text-lg font-bold mb-4 text-white">Soporte Técnico</h3>
             <ul className="space-y-2">
               {footerSections.soporte.map((link, index) => (
                 <li key={index}>
@@ -64,12 +64,12 @@ const Footer: React.FC = () => {
             </span>
           </div>
           <p className="text-gray-400 text-sm">
-            Â© 2026 Encuentra24.com AG. Todos los derechos reservados.
+            © 2026 Encuentra24.com AG. Todos los derechos reservados.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="text-2xl hover:-translate-y-1 transition-transform">ðŸ“˜</a>
-            <a href="#" className="text-2xl hover:-translate-y-1 transition-transform">ðŸ“·</a>
-            <a href="#" className="text-2xl hover:-translate-y-1 transition-transform">ðŸ¦</a>
+            <a href="#" className="text-2xl hover:-translate-y-1 transition-transform">📘</a>
+            <a href="#" className="text-2xl hover:-translate-y-1 transition-transform">📷</a>
+            <a href="#" className="text-2xl hover:-translate-y-1 transition-transform">🐦</a>
           </div>
         </div>
       </div>

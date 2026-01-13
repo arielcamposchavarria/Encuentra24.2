@@ -29,7 +29,7 @@ const ListingCard: React.FC<ListingCardProps> = ({ listing }) => {
           {listing.image}
         </div>
         <button className="absolute top-4 right-4 bg-white/90 border-none w-9 h-9 rounded-full flex items-center justify-center cursor-pointer text-xl transition-all hover:bg-white hover:scale-110">
-          â™¡
+          ♡
         </button>
       </div>
 
@@ -37,7 +37,7 @@ const ListingCard: React.FC<ListingCardProps> = ({ listing }) => {
         <h3 className="text-base font-semibold text-gray-800 mb-2 overflow-hidden whitespace-nowrap text-ellipsis">
           {listing.title}
         </h3>
-        <p className="text-sm text-gray-600 mb-3">ðŸ“ {listing.location}</p>
+        <p className="text-sm text-gray-600 mb-3">📍 {listing.location}</p>
 
         {listing.specs && listing.specs.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-4">

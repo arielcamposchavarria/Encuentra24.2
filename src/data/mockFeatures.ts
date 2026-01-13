@@ -3,32 +3,32 @@ import type { Feature } from '../types';
 export const mockFeatures: Feature[] = [
   {
     title: 'Clasificados',
-    description: 'Miles de anuncios en categorÃƒÂ­as como autos, inmuebles, empleos y mÃƒÂ¡s',
-    icon: 'Ã°Å¸â€œâ€¹'
+    description: 'Miles de anuncios en categorías como autos, inmuebles, empleos y más',
+    icon: '📋'
   },
   {
-    title: 'MembresÃƒÂ­as',
-    description: 'Planes premium para destacar tus anuncios y llegar a mÃƒÂ¡s personas',
-    icon: 'Ã¢Â­Â'
+    title: 'Membresías',
+    description: 'Planes premium para destacar tus anuncios y llegar a más personas',
+    icon: '⭐'
   },
   {
-    title: 'SoluciÃƒÂ³n de Negocios',
+    title: 'Solución de Negocios',
     description: 'Herramientas especializadas para impulsar tu negocio',
-    icon: 'Ã°Å¸â€™Â¼'
+    icon: '💼'
   },
   {
-    title: 'AtenciÃƒÂ³n al Cliente',
+    title: 'Atención al Cliente',
     description: 'Soporte dedicado para ayudarte en cada paso del proceso',
-    icon: 'Ã°Å¸Å½Â§'
+    icon: '🎧'
   },
   {
     title: 'Resalta tu Anuncio',
-    description: 'Opciones para que tu anuncio sea mÃƒÂ¡s visible y obtenga mejores resultados',
-    icon: 'Ã°Å¸Å¡â‚¬'
+    description: 'Opciones para que tu anuncio sea más visible y obtenga mejores resultados',
+    icon: '🚀'
   },
   {
-    title: 'CrÃƒÂ©dito Virtual',
-    description: 'Sistema de crÃƒÂ©ditos para gestionar tus publicaciones fÃƒÂ¡cilmente',
-    icon: 'Ã°Å¸â€™Â³'
+    title: 'Crédito Virtual',
+    description: 'Sistema de créditos para gestionar tus publicaciones fácilmente',
+    icon: '💳'
   }
 ];

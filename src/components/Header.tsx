@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({ onCountrySelect, onLogoClick, selectedC
             value={selectedCountry}
             onChange={(e) => onCountrySelect(e.target.value)}
           >
-            <option value="">Selecciona un paÃ­s</option>
+            <option value="">Selecciona un país</option>
             {COUNTRIES.map((country) => (
               <option key={country} value={country}>{country}</option>
             ))}
@@ -54,7 +54,7 @@ const Header: React.FC<HeaderProps> = ({ onCountrySelect, onLogoClick, selectedC
           </div>
 
           <button className="px-6 py-2 bg-blue-600 text-white rounded-lg text-base font-medium transition-colors hover:bg-blue-700">
-            Iniciar SesiÃ³n
+            Iniciar Sesión
           </button>
         </div>
       </div>

@@ -10,7 +10,7 @@ const CountryCards: React.FC<CountryCardsProps> = ({ onCountrySelect }) => {
     <section className="py-16 px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
-          Explora por paÃ­s
+          Explora por país
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {mockCountries.map((country) => (

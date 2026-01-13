@@ -18,7 +18,7 @@ const Sidebar: React.FC = () => {
   return (
     <aside className="bg-white rounded-xl p-6 shadow-md sticky top-24 h-fit">
       <div className="mb-8 pb-6 border-b border-gray-200">
-        <h3 className="text-base font-bold text-gray-800 mb-4">SubcategorÃ­as</h3>
+        <h3 className="text-base font-bold text-gray-800 mb-4">Subcategorías</h3>
         <ul className="space-y-2">
           {SUBCATEGORIES.map((sub) => (
             <li key={sub}>
@@ -31,7 +31,7 @@ const Sidebar: React.FC = () => {
       </div>
 
       <div className="mb-8 pb-6 border-b border-gray-200">
-        <h3 className="text-base font-bold text-gray-800 mb-4">CondiciÃ³n</h3>
+        <h3 className="text-base font-bold text-gray-800 mb-4">Condición</h3>
         <div className="flex flex-col gap-3">
           {CONDITIONS.map((condition) => (
             <label key={condition} className="flex items-center gap-2 cursor-pointer text-sm text-gray-600">
@@ -52,7 +52,7 @@ const Sidebar: React.FC = () => {
         <div className="flex items-center gap-2">
           <input
             type="number"
-            placeholder="MÃ­nimo"
+            placeholder="Mínimo"
             value={priceRange[0]}
             onChange={(e) => setPriceRange([+e.target.value, priceRange[1]])}
             className="flex-1 px-2 py-2 border-2 border-gray-300 rounded-md text-sm focus:outline-none focus:border-blue-600"
@@ -60,7 +60,7 @@ const Sidebar: React.FC = () => {
           <span className="text-gray-600 font-semibold">-</span>
           <input
             type="number"
-            placeholder="MÃ¡ximo"
+            placeholder="Máximo"
             value={priceRange[1]}
             onChange={(e) => setPriceRange([priceRange[0], +e.target.value])}
             className="flex-1 px-2 py-2 border-2 border-gray-300 rounded-md text-sm focus:outline-none focus:border-blue-600"

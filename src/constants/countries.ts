@@ -4,8 +4,8 @@ export const COUNTRIES = [
   'Guatemala',
   'Honduras',
   'Nicaragua',
-  'PanamÃƒÂ¡',
-  'RepÃƒÂºblica Dominicana',
+  'Panamá',
+  'República Dominicana',
   'Ecuador',
   'Colombia'
 ] as const;

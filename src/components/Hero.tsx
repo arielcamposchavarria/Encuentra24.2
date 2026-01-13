@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
     <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-purple-700 py-16 px-8 text-white">
       <div className="max-w-5xl mx-auto text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
-          Encuentra anuncios de bienes de consumo, autos, inmuebles, empleos y mÃ¡s
+          Encuentra anuncios de bienes de consumo, autos, inmuebles, empleos y más
         </h1>
 
         <div className="flex flex-col md:flex-row gap-4 bg-white p-4 rounded-xl shadow-2xl max-w-4xl mx-auto">
@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
             <input
               type="text"
               className="w-full py-3 pl-12 pr-4 border-2 border-gray-200 rounded-lg text-base text-gray-800 focus:outline-none focus:border-indigo-500 transition-colors"
-              placeholder="Â¿QuÃ© estÃ¡s buscando?"
+              placeholder="¿Qué estás buscando?"
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
             />
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
             <input
               type="text"
               className="w-full py-3 pl-12 pr-4 border-2 border-gray-200 rounded-lg text-base text-gray-800 focus:outline-none focus:border-indigo-500 transition-colors"
-              placeholder="UbicaciÃ³n"
+              placeholder="Ubicación"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
             />

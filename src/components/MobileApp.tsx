@@ -6,10 +6,10 @@ const MobileApp: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="flex-1">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Descarga nuestra aplicaciÃ³n</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Descarga nuestra aplicación</h2>
             <p className="text-lg mb-8 opacity-95 leading-relaxed">
               Lleva Encuentra24 contigo a donde vayas. Busca, publica y gestiona tus anuncios
-              desde tu dispositivo mÃ³vil de forma rÃ¡pida y sencilla.
+              desde tu dispositivo móvil de forma rápida y sencilla.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="bg-white/20 backdrop-blur-md border-2 border-white/30 rounded-xl px-6 py-3 transition-all hover:bg-white/30 hover:-translate-y-1">
@@ -37,7 +37,7 @@ const MobileApp: React.FC = () => {
             </div>
           </div>
           <div className="flex-1 flex justify-center items-center">
-            <div className="text-9xl opacity-90 drop-shadow-2xl">ðŸ“±</div>
+            <div className="text-9xl opacity-90 drop-shadow-2xl">📱</div>
           </div>
         </div>
       </div>

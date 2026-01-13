@@ -1,0 +1,30 @@
+# Establecer comportamiento predeterminado para line endings en Windows
+* text=auto eol=crlf
+
+# Archivos de texto específicos
+*.ts text eol=crlf
+*.tsx text eol=crlf
+*.js text eol=crlf
+*.jsx text eol=crlf
+*.json text eol=crlf
+*.css text eol=crlf
+*.html text eol=crlf
+*.md text eol=crlf
+
+# Archivos de configuración
+*.config.js text eol=crlf
+*.config.ts text eol=crlf
+.gitignore text eol=crlf
+.gitattributes text eol=crlf
+
+# Archivos binarios
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary

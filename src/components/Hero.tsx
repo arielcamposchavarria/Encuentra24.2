@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
     <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-purple-700 py-16 px-8 text-white">
       <div className="max-w-5xl mx-auto text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
-          Encuentra anuncios de bienes de consumo, autos, inmuebles, empleos y más
+          Encuentra las mejores propiedades en Costa Rica
         </h1>
 
         <div className="flex flex-col md:flex-row gap-4 bg-white p-4 rounded-xl shadow-2xl max-w-4xl mx-auto">

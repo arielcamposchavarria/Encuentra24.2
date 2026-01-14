@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
             </span>
           </div>
           <p className="text-gray-400 text-sm">
-            © 2026 Encuentra24.com AG. Todos los derechos reservados.
+            © 2026 Encuentra26.com AG. Todos los derechos reservados.
           </p>
           <div className="flex gap-4">
             <a href="#" className="text-2xl hover:-translate-y-1 transition-transform">📘</a>

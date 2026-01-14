@@ -3,6 +3,7 @@ import type { Listing } from '../types';
 
 interface ListingCardProps {
   listing: Listing;
+  onListingClick?: (id: string) => void;
 }
 
 const getBadgeStyles = (badge?: string) => {
@@ -15,17 +16,26 @@ const getBadgeStyles = (badge?: string) => {
   return badge ? styles[badge as keyof typeof styles] || 'bg-blue-500' : '';
 };
 
-const ListingCard: React.FC<ListingCardProps> = ({ listing }) => {
+const ListingCard: React.FC<ListingCardProps> = ({ listing, onListingClick }) => {
+  const handleClick = () => {
+    if (onListingClick) {
+      onListingClick(listing.id);
+    }
+  };
+
   return (
-    <div className={`bg-white rounded-xl overflow-hidden shadow-md transition-all hover:-translate-y-2 hover:shadow-2xl cursor-pointer relative ${listing.featured ? 'border-2 border-amber-500' : ''}`}>
+    <div
+      onClick={handleClick}
+      className={`bg-white rounded-xl overflow-hidden shadow-md transition-all hover:-translate-y-2 hover:shadow-2xl cursor-pointer relative ${listing.featured ? 'border-2 border-amber-500' : ''}`}
+    >
       {listing.badge && (
         <span className={`absolute top-4 left-4 px-3 py-1 rounded-md text-xs font-bold uppercase z-10 text-white ${getBadgeStyles(listing.badge)}`}>
           {listing.badge}
         </span>
       )}
 
-      <div className="relative w-full h-48 bg-gray-200 overflow-hidden">
-        <div className="w-full h-full flex items-center justify-center text-6xl bg-gradient-to-br from-indigo-500 to-purple-600">
+      <div className="relative w-full h-64 md:h-72 bg-gray-200 overflow-hidden">
+        <div className="w-full h-full flex items-center justify-center text-8xl md:text-9xl bg-gradient-to-br from-indigo-500 to-purple-600">
           {listing.image}
         </div>
         <button className="absolute top-4 right-4 bg-white/90 border-none w-9 h-9 rounded-full flex items-center justify-center cursor-pointer text-xl transition-all hover:bg-white hover:scale-110">

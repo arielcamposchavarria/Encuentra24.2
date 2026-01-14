@@ -8,7 +8,7 @@ const MobileApp: React.FC = () => {
           <div className="flex-1">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Descarga nuestra aplicación</h2>
             <p className="text-lg mb-8 opacity-95 leading-relaxed">
-              Lleva Encuentra24 contigo a donde vayas. Busca, publica y gestiona tus anuncios
+              Lleva Encuentra26 contigo a donde vayas. Busca, publica y gestiona tus anuncios
               desde tu dispositivo móvil de forma rápida y sencilla.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">

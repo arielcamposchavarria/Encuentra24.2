@@ -6,38 +6,83 @@ import Features from './components/Features';
 import MobileApp from './components/MobileApp';
 import Footer from './components/Footer';
 import ClassifiedsPage from './components/ClassifiedsPage';
+import DetailPage from './components/DetailPage';
+import { mockListings } from './data/mockListings';
 
 function App() {
-  const [selectedCountry, setSelectedCountry] = useState<string>('');
-  const [currentView, setCurrentView] = useState<'home' | 'classifieds'>('home');
+  const [selectedProvince, setSelectedProvince] = useState<string>('');
+  const [selectedCanton, setSelectedCanton] = useState<string>('');
+  const [currentView, setCurrentView] = useState<'home' | 'classifieds' | 'detail'>('home');
+  const [selectedListingId, setSelectedListingId] = useState<string>('');
 
-  const handleCountrySelect = (country: string) => {
-    setSelectedCountry(country);
-    setCurrentView('classifieds');
+  const handleLocationSelect = (province: string, canton?: string) => {
+    setSelectedProvince(province);
+    setSelectedCanton(canton || '');
+    if (province) {
+      setCurrentView('classifieds');
+    }
   };
 
   const handleBackToHome = () => {
     setCurrentView('home');
-    setSelectedCountry('');
+    setSelectedProvince('');
+    setSelectedCanton('');
+    setSelectedListingId('');
+  };
+
+  const handleListingClick = (id: string) => {
+    setSelectedListingId(id);
+    setCurrentView('detail');
+  };
+
+  const handleBackToClassifieds = () => {
+    setCurrentView('classifieds');
+    setSelectedListingId('');
+  };
+
+  const getLocationLabel = () => {
+    if (selectedCanton && selectedProvince) {
+      return `${selectedCanton}, ${selectedProvince}`;
+    }
+    if (selectedProvince) {
+      return selectedProvince;
+    }
+    return '';
   };
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header
-        onCountrySelect={handleCountrySelect}
+        onLocationSelect={handleLocationSelect}
         onLogoClick={handleBackToHome}
-        selectedCountry={selectedCountry}
+        selectedProvince={selectedProvince}
+        selectedCanton={selectedCanton}
+        showSearch={currentView === 'classifieds' || currentView === 'detail'}
       />
 
-      {currentView === 'home' ? (
+      {currentView === 'home' && (
         <>
           <Hero />
-          <CountryCards onCountrySelect={handleCountrySelect} />
+          <CountryCards onCountrySelect={handleLocationSelect} />
           <Features />
           <MobileApp />
         </>
-      ) : (
-        <ClassifiedsPage country={selectedCountry} />
+      )}
+
+      {currentView === 'classifieds' && (
+        <ClassifiedsPage
+          location={getLocationLabel()}
+          onListingClick={handleListingClick}
+        />
+      )}
+
+      {currentView === 'detail' && (
+        <DetailPage
+          listingId={selectedListingId}
+          onBack={handleBackToClassifieds}
+          onListingClick={handleListingClick}
+          allListings={mockListings}
+        />
       )}
 
       <Footer />

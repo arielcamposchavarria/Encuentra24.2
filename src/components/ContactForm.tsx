@@ -107,7 +107,7 @@ const ContactForm = ({ listingTitle, sellerName }: ContactFormProps) => {
               className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-colors ${
                 errors.name
                   ? 'border-red-500 focus:ring-red-500'
-                  : 'border-gray-300 focus:ring-blue-500'
+                  : 'border-gray-300 focus:ring-[#202d59]'
               }`}
               placeholder="Ej: Juan Pérez"
             />
@@ -135,7 +135,7 @@ const ContactForm = ({ listingTitle, sellerName }: ContactFormProps) => {
               className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-colors ${
                 errors.email
                   ? 'border-red-500 focus:ring-red-500'
-                  : 'border-gray-300 focus:ring-blue-500'
+                  : 'border-gray-300 focus:ring-[#202d59]'
               }`}
               placeholder="ejemplo@email.com"
             />
@@ -163,7 +163,7 @@ const ContactForm = ({ listingTitle, sellerName }: ContactFormProps) => {
               className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-colors ${
                 errors.phone
                   ? 'border-red-500 focus:ring-red-500'
-                  : 'border-gray-300 focus:ring-blue-500'
+                  : 'border-gray-300 focus:ring-[#202d59]'
               }`}
               placeholder="+506 8888-8888"
             />
@@ -191,7 +191,7 @@ const ContactForm = ({ listingTitle, sellerName }: ContactFormProps) => {
               className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-colors resize-none ${
                 errors.message
                   ? 'border-red-500 focus:ring-red-500'
-                  : 'border-gray-300 focus:ring-blue-500'
+                  : 'border-gray-300 focus:ring-[#202d59]'
               }`}
               placeholder="Escribe tu mensaje aquí..."
             />
@@ -208,7 +208,7 @@ const ContactForm = ({ listingTitle, sellerName }: ContactFormProps) => {
           {/* Botón de envío */}
           <button
             type="submit"
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+            className="w-full bg-[#202d59] hover:bg-[#202d59]/90 text-white font-semibold py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />

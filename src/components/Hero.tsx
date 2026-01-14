@@ -5,7 +5,7 @@ const Hero: React.FC = () => {
   const [location, setLocation] = useState('');
 
   return (
-    <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-purple-700 py-16 px-8 text-white">
+    <section className="bg-gradient-to-br from-[#202d59] via-[#a31e22] to-[#00cfe5] py-16 px-8 text-white">
       <div className="max-w-5xl mx-auto text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
           Encuentra las mejores propiedades en Costa Rica
@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
             </svg>
             <input
               type="text"
-              className="w-full py-3 pl-12 pr-4 border-2 border-gray-200 rounded-lg text-base text-gray-800 focus:outline-none focus:border-indigo-500 transition-colors"
+              className="w-full py-3 pl-12 pr-4 border-2 border-gray-200 rounded-lg text-base text-gray-800 focus:outline-none focus:border-[#202d59] transition-colors"
               placeholder="¿Qué estás buscando?"
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
@@ -32,14 +32,14 @@ const Hero: React.FC = () => {
             </svg>
             <input
               type="text"
-              className="w-full py-3 pl-12 pr-4 border-2 border-gray-200 rounded-lg text-base text-gray-800 focus:outline-none focus:border-indigo-500 transition-colors"
+              className="w-full py-3 pl-12 pr-4 border-2 border-gray-200 rounded-lg text-base text-gray-800 focus:outline-none focus:border-[#202d59] transition-colors"
               placeholder="Ubicación"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
             />
           </div>
 
-          <button className="py-3 px-10 bg-red-500 text-white rounded-lg text-base font-semibold transition-colors hover:bg-red-600 whitespace-nowrap">
+          <button className="py-3 px-10 bg-[#a31e22] text-white rounded-lg text-base font-semibold transition-colors hover:bg-[#a31e22]/90 whitespace-nowrap">
             Buscar
           </button>
         </div>

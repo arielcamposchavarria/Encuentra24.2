@@ -8,12 +8,12 @@ interface ListingCardProps {
 
 const getBadgeStyles = (badge?: string) => {
   const styles = {
-    Urgente: 'bg-red-500',
-    Ganga: 'bg-green-500',
+    Urgente: 'bg-[#a31e22]',
+    Ganga: 'bg-[#00cfe5]',
     Oportunidad: 'bg-amber-500',
-    Platino: 'bg-gradient-to-r from-gray-300 to-gray-100 text-gray-800'
+    Platino: 'bg-gradient-to-r from-[#c3b3a2] to-gray-100 text-gray-800'
   };
-  return badge ? styles[badge as keyof typeof styles] || 'bg-blue-500' : '';
+  return badge ? styles[badge as keyof typeof styles] || 'bg-[#202d59]' : '';
 };
 
 const ListingCard: React.FC<ListingCardProps> = ({ listing, onListingClick }) => {
@@ -35,7 +35,7 @@ const ListingCard: React.FC<ListingCardProps> = ({ listing, onListingClick }) =>
       )}
 
       <div className="relative w-full h-64 md:h-72 bg-gray-200 overflow-hidden">
-        <div className="w-full h-full flex items-center justify-center text-8xl md:text-9xl bg-gradient-to-br from-indigo-500 to-purple-600">
+        <div className="w-full h-full flex items-center justify-center text-8xl md:text-9xl bg-gradient-to-br from-[#202d59] to-[#00cfe5]">
           {listing.image}
         </div>
         <button className="absolute top-4 right-4 bg-white/90 border-none w-9 h-9 rounded-full flex items-center justify-center cursor-pointer text-xl transition-all hover:bg-white hover:scale-110">
@@ -60,8 +60,8 @@ const ListingCard: React.FC<ListingCardProps> = ({ listing, onListingClick }) =>
         )}
 
         <div className="flex justify-between items-center pt-3 border-t border-gray-200">
-          <p className="text-xl font-bold text-blue-600">{listing.price}</p>
-          <button className="px-4 py-2 bg-green-500 text-white rounded-md text-sm font-semibold transition-colors hover:bg-green-600">
+          <p className="text-xl font-bold text-[#a31e22]">{listing.price}</p>
+          <button className="px-4 py-2 bg-[#00cfe5] text-white rounded-md text-sm font-semibold transition-colors hover:bg-[#00cfe5]/90">
             Contactar
           </button>
         </div>

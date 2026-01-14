@@ -2,13 +2,13 @@ import React from 'react';
 
 const MobileApp: React.FC = () => {
   return (
-    <section className="py-16 px-8 bg-gradient-to-br from-indigo-600 via-purple-600 to-purple-700 text-white">
+    <section className="py-16 px-8 bg-gradient-to-br from-[#202d59] via-[#a31e22] to-[#00cfe5] text-white">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="flex-1">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Descarga nuestra aplicación</h2>
             <p className="text-lg mb-8 opacity-95 leading-relaxed">
-              Lleva Encuentra26 contigo a donde vayas. Busca, publica y gestiona tus anuncios
+              Lleva CCCBR contigo a donde vayas. Busca, publica y gestiona tus anuncios
               desde tu dispositivo móvil de forma rápida y sencilla.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">

@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-gray-800 text-gray-300 py-12 px-8">
+    <footer className="bg-[#202d59] text-gray-300 py-12 px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerSections.marca.map((link, index) => (
                 <li key={index}>
-                  <a href="#" className="text-base hover:text-indigo-400 transition-colors">{link}</a>
+                  <a href="#" className="text-base hover:text-[#00cfe5] transition-colors">{link}</a>
                 </li>
               ))}
             </ul>
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerSections.soporte.map((link, index) => (
                 <li key={index}>
-                  <a href="#" className="text-base hover:text-indigo-400 transition-colors">{link}</a>
+                  <a href="#" className="text-base hover:text-[#00cfe5] transition-colors">{link}</a>
                 </li>
               ))}
             </ul>
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerSections.clasificados.map((link, index) => (
                 <li key={index}>
-                  <a href="#" className="text-base hover:text-indigo-400 transition-colors">{link}</a>
+                  <a href="#" className="text-base hover:text-[#00cfe5] transition-colors">{link}</a>
                 </li>
               ))}
             </ul>
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerSections.legal.map((link, index) => (
                 <li key={index}>
-                  <a href="#" className="text-base hover:text-indigo-400 transition-colors">{link}</a>
+                  <a href="#" className="text-base hover:text-[#00cfe5] transition-colors">{link}</a>
                 </li>
               ))}
             </ul>
@@ -59,12 +59,10 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div>
-            <span className="text-2xl font-bold text-indigo-500">
-              Encuentra<span className="text-red-500">24</span>
-            </span>
+            <span className="text-2xl font-bold text-[#a31e22]">CCCBR</span>
           </div>
           <p className="text-gray-400 text-sm">
-            © 2026 Encuentra26.com AG. Todos los derechos reservados.
+            © 2026 CCCBR. Todos los derechos reservados.
           </p>
           <div className="flex gap-4">
             <a href="#" className="text-2xl hover:-translate-y-1 transition-transform">📘</a>

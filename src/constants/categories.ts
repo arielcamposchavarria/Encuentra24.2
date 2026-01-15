@@ -9,13 +9,9 @@ export const CATEGORIES: Category[] = [
 
 export const SEARCH_CATEGORIES = [
   'Todas las categorías',
-  'Autos',
-  'Inmuebles',
-  'Empleos',
-  'Servicios',
-  'Tecnología',
-  'Muebles',
-  'Mascotas'
+ 
+  'Inmuebles'
+  
 ] as const;
 
 export const SUBCATEGORIES = [

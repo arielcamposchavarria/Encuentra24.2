@@ -62,11 +62,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
       {/* Drawer */}
       <aside
-        className={`fixed top-0 left-0 h-full w-80 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out overflow-y-auto ${
+        className={`fixed top-0 left-0 h-full w-full sm:w-96 md:w-[420px] bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out overflow-y-auto ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="p-6">
+        <div className="p-5 sm:p-6 md:p-8">
           {/* Header */}
           <div className="flex items-center justify-between mb-6 pb-4 border-b">
             <h2 className="text-xl font-bold text-gray-900">Filtros</h2>
@@ -103,24 +103,30 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <div className="mb-6 pb-6 border-b border-gray-200">
             <h3 className="text-base font-bold text-gray-800 mb-4">Rango de Precio</h3>
             <div className="space-y-3">
-              <div className="flex items-center gap-2">
-                <input
-                  type="number"
-                  placeholder="Mínimo"
-                  value={priceRange[0]}
-                  onChange={(e) => setPriceRange([+e.target.value, priceRange[1]])}
-                  className="flex-1 px-3 py-2 border-2 border-gray-300 rounded-md text-sm focus:outline-none focus:border-blue-600"
-                />
-                <span className="text-gray-600 font-semibold">-</span>
-                <input
-                  type="number"
-                  placeholder="Máximo"
-                  value={priceRange[1]}
-                  onChange={(e) => setPriceRange([priceRange[0], +e.target.value])}
-                  className="flex-1 px-3 py-2 border-2 border-gray-300 rounded-md text-sm focus:outline-none focus:border-blue-600"
-                />
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-2">
+                <div className="flex-1">
+                  <label className="text-xs text-gray-500 mb-1 block sm:hidden">Mínimo</label>
+                  <input
+                    type="number"
+                    placeholder="Mínimo"
+                    value={priceRange[0]}
+                    onChange={(e) => setPriceRange([+e.target.value, priceRange[1]])}
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-sm focus:outline-none focus:border-blue-600"
+                  />
+                </div>
+                <span className="text-gray-600 font-semibold hidden sm:block">-</span>
+                <div className="flex-1">
+                  <label className="text-xs text-gray-500 mb-1 block sm:hidden">Máximo</label>
+                  <input
+                    type="number"
+                    placeholder="Máximo"
+                    value={priceRange[1]}
+                    onChange={(e) => setPriceRange([priceRange[0], +e.target.value])}
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-sm focus:outline-none focus:border-blue-600"
+                  />
+                </div>
               </div>
-              <div className="text-xs text-gray-500">
+              <div className="text-sm text-gray-600 bg-gray-50 rounded-lg px-3 py-2 text-center">
                 ${priceRange[0].toLocaleString()} - ${priceRange[1].toLocaleString()}
               </div>
             </div>
@@ -129,12 +135,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           {/* Habitaciones */}
           <div className="mb-6 pb-6 border-b border-gray-200">
             <h3 className="text-base font-bold text-gray-800 mb-4">Habitaciones</h3>
-            <div className="grid grid-cols-5 gap-2">
+            <div className="grid grid-cols-5 gap-2 sm:gap-3">
               {ROOMS.map((room) => (
                 <button
                   key={room}
                   onClick={() => setSelectedRooms(room === selectedRooms ? '' : room)}
-                  className={`py-2 px-3 text-sm font-semibold rounded-lg border-2 transition-all ${
+                  className={`py-3 px-2 sm:px-4 text-sm font-semibold rounded-lg border-2 transition-all ${
                     selectedRooms === room
                       ? 'bg-blue-600 text-white border-blue-600'
                       : 'bg-white text-gray-700 border-gray-300 hover:border-blue-600'
@@ -165,13 +171,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Botones de acción */}
-          <div className="space-y-3 sticky bottom-0 bg-white pt-4">
-            <button className="w-full py-3 bg-blue-600 text-white rounded-lg text-base font-semibold transition-colors hover:bg-blue-700">
+          <div className="space-y-3 sticky bottom-0 bg-white pt-4 pb-2">
+            <button className="w-full py-3.5 bg-blue-600 text-white rounded-lg text-base font-semibold transition-colors hover:bg-blue-700 shadow-md">
               Aplicar Filtros
             </button>
             <button
               onClick={handleClearFilters}
-              className="w-full py-3 bg-gray-100 text-gray-700 rounded-lg text-base font-semibold transition-colors hover:bg-gray-200"
+              className="w-full py-3.5 bg-gray-100 text-gray-700 rounded-lg text-base font-semibold transition-colors hover:bg-gray-200"
             >
               Limpiar Filtros
             </button>

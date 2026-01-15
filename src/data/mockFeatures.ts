@@ -3,7 +3,7 @@ import type { Feature } from '../types';
 export const mockFeatures: Feature[] = [
   {
     title: 'Clasificados',
-    description: 'Miles de anuncios en categorías como autos, inmuebles, empleos y más',
+    description: 'Miles de anuncios en categorías de inmuebles',
     icon: '📋'
   },
   {
